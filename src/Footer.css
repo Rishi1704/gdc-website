@@ -1,0 +1,71 @@
+footer a {
+    color: #ffffff;
+}
+
+.back-g {
+    background-color: rgb(20, 21, 22);
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons i {
+    color: #f2ebe0;
+    margin-right: 0px;
+    font-size: 25px;
+}
+
+.fa {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+
+}
+
+a,
+a:active,
+a:focus,
+a:active {
+    text-decoration: none !important;
+}
+
+@media only screen and (max-width: 800px) {
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    .social-icons {
+        flex-direction: column;
+    }
+}

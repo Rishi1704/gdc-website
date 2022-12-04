@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header">
         <p>
           This website is under construction. Come back later!
         </p>
@@ -17,7 +16,8 @@ function App() {
         >
           Visit the previous site till then.
         </a>
-      </header>
+      </header> */}
+      <Footer />
     </div>
   );
 }
