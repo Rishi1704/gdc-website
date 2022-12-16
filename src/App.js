@@ -1,6 +1,6 @@
 import './App.css';
 import Footer from './Footer';
-
+import Home from './Home';
 function App() {
   return (
     <div className="App">
@@ -17,6 +17,7 @@ function App() {
           Visit the previous site till then.
         </a>
       </header> */}
+      <Home />
       <Footer />
     </div>
   );

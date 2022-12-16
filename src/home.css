@@ -1,0 +1,19 @@
+.learn-body{
+    overflow: hidden;
+    height: 70vh;
+    width: 100%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.image-track{
+    display: flex;
+    margin: 0;
+    gap: 2vw;
+    align-items: center;
+}
+img{
+    height: 56vh;
+    width: 22vw;
+    object-fit: cover;
+}
