@@ -1,19 +1,23 @@
 .learn-body{
-    overflow: hidden;
-    height: 70vh;
+    overflow-x: scroll;
+    height: 40vw;
     width: 100%;
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    position: relative;
 }
 .image-track{
     display: flex;
+    position: absolute;
     margin: 0;
     gap: 2vw;
     align-items: center;
+    transform: translate(0%,10%);
 }
 img{
-    height: 56vh;
+    height: 32vw;
     width: 22vw;
     object-fit: cover;
 }
+
