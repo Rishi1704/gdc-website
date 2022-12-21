@@ -1,24 +1,17 @@
+import { useState } from 'react';
 import './App.css';
 import Footer from './Footer';
 import Home from './Home';
+import Cursor from './components/cursor';
+
 function App() {
+  const [hover, setHover] = useState(false)
+
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <p>
-          This website is under construction. Come back later!
-        </p>
-        <a
-          className="App-link"
-          href="https://gds.sntiitk.in/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit the previous site till then.
-        </a>
-      </header> */}
-      <Home />
-      <Footer />
+      <Cursor hoverState={hover} />
+      <Home setH={setHover} />
+      <Footer setH={setHover} />
     </div>
   );
 }

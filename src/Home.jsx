@@ -10,7 +10,7 @@ const images = [{index: 1,src: 'https://images.unsplash.com/photo-1670662902769-
 {index:7,src:'https://images.unsplash.com/photo-1671070850059-01e6ef78b35a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'},
 {index:8,src:'https://images.unsplash.com/photo-1661961111184-11317b40adb2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80'}]
 
-const Home = () => {
+const Home = (props) => {
     const ref = useRef();
     const [mouseClickLocation,setMouseClickLocation] = useState(0);
     const [percentage,setPercentage] = useState(0);
@@ -41,16 +41,25 @@ const Home = () => {
   return (
     <div style={{backgroundColor: 'black',color: 'white'}}>
         <div style={{height:'100vh',display:'flex',alignItems: 'center',justifyContent: 'center',flexDirection: 'column'}}>
-            <h1>Game Development</h1>
-            <h1>Club</h1>
+            <h1
+            onMouseEnter={() => props.setH(true)}
+            onMouseLeave={() => props.setH(false)}>Game Development</h1>
+            <h1
+            onMouseEnter={() => props.setH(true)}
+            onMouseLeave={() => props.setH(false)}>Club</h1>
         </div>
         <hr />
-        <h2>Learn</h2>
+        <h2
+        onMouseEnter={() => props.setH(true)}
+        onMouseLeave={() => props.setH(false)}>Learn</h2>
         <div ref={ref} className='learn-body' onScroll={handleScroll} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}>
             <div className='image-track'>
                 <div style={{width: '50vw',marginRight:'-2vw'}}></div>
                 {images.map((image)=>(
-                    <img key={image.index} unselectable='on' draggable='false' alt='' src={image.src} style={{objectPosition: `${Math.min(Math.max((percentage)*(width-100)/100+50+image.index*22+(image.index-1)*2,0),100)}% 50%`}} />
+                    <img 
+                    onMouseEnter={() => props.setH(true)}
+                    onMouseLeave={() => props.setH(false)} 
+                    key={image.index} unselectable='on' draggable='false' alt='' src={image.src} style={{objectPosition: `${Math.min(Math.max((percentage)*(width-100)/100+50+image.index*22+(image.index-1)*2,0),100)}% 50%`}} />
                 ))}
                 <div style={{width: '50vw',marginLeft:'-2vw'}}></div>
             </div>
