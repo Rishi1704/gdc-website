@@ -6,9 +6,6 @@ function Cursor(props) {
     
     React.useEffect(() => {
         document.addEventListener('mousemove', (e) => {
-            console.log(e);
-            console.log(cursorRef.current.clientWidth);
-            console.log(cursorRef.current.clientHeight);
             const {clientX, clientY} = e;
             const mouseX = clientX - cursorRef.current.clientWidth / 2;
             const mouseY = clientY - cursorRef.current.clientHeight / 2;
