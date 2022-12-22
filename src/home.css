@@ -1,4 +1,4 @@
-.learn-body{
+.learn-body {
     overflow-x: scroll;
     height: 40vw;
     width: 100%;
@@ -7,17 +7,71 @@
     user-select: none;
     position: relative;
 }
-.image-track{
+
+.image-track {
     display: flex;
     position: absolute;
     margin: 0;
     gap: 2vw;
     align-items: center;
-    transform: translate(0%,10%);
+    transform: translate(0%, 10%);
 }
-img{
+
+img {
     height: 32vw;
     width: 22vw;
     object-fit: cover;
 }
 
+.home-learn-heading {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:1000px) {
+    img {
+        height: 42vw;
+        width: 32vw;
+    }
+
+    .learn-body {
+        height: 50vw;
+    }
+
+    .image-track {
+        gap: 3vw;
+    }
+
+    .home-component>div>h1 {
+        font-size: 2rem;
+    }
+
+    .home-learn-heading {
+        font-size: 2rem;
+        margin-bottom: -10px;
+    }
+}
+
+@media (max-width:500px) {
+    img {
+        height: 90vw;
+        width: 75vw;
+    }
+
+    .learn-body {
+        height: 105vw;
+    }
+
+    .image-track {
+        gap: 3vw;
+    }
+
+    .home-component>div>h1 {
+        font-size: 2rem;
+    }
+
+    .home-learn-heading {
+        font-size: 2rem;
+        margin-bottom: -10px;
+    }
+}

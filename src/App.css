@@ -4,11 +4,17 @@
     cursor: none;
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
     display: none;
 }
 
-*{
+* {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+@media(max-width:500px) {
+    .custom-cursor {
+        display: none !important;
+    }
 }
