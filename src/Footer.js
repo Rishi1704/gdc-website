@@ -7,7 +7,7 @@ import { faInstagram, faFacebook, faLinkedinIn, faTwitch, faDiscord } from '@for
 const currentYear = new Date().getFullYear();
 
 
-function Footer() {
+function Footer(props) {
     return (
         <div>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossOrigin="anonymous" />
@@ -22,7 +22,10 @@ function Footer() {
 
                     {/* Social buttons */}
                     <ul className="social-icons list-unstyled list-inline text-center">
-                        <li className="list-inline-item">
+                        <li 
+                        onMouseEnter={() => props.setH(true)}
+                        onMouseLeave={() => props.setH(false)} 
+                        className="list-inline-item">
                             <a className="btn-floating btn-email mx-1" href="mailto:gamedeviitk@gmail.com" target="_blank">
                                 <i className="fa fa-envelope">
                                     <FontAwesomeIcon icon={faEnvelope} />
@@ -30,7 +33,10 @@ function Footer() {
 
                             </a>
                         </li>
-                        <li className="list-inline-item">
+                        <li 
+                        onMouseEnter={() => props.setH(true)}
+                        onMouseLeave={() => props.setH(false)} 
+                        className="list-inline-item">
                             <a className="btn-floating btn-fb mx-1" href="https://www.facebook.com/gamedev.iitk" target="_blank">
                                 <i className="fab fa-facebook">
                                     <FontAwesomeIcon icon={faFacebook} />
@@ -38,7 +44,10 @@ function Footer() {
 
                             </a>
                         </li>
-                        <li className="list-inline-item">
+                        <li 
+                        onMouseEnter={() => props.setH(true)}
+                        onMouseLeave={() => props.setH(false)} 
+                        className="list-inline-item">
                             <a className="btn-floating btn-ins mx-1" href="https://www.instagram.com/gamedev_iitk/" target="_blank">
                                 <i className="fab fa-instagram">
                                     <FontAwesomeIcon icon={faInstagram} />
@@ -46,7 +55,10 @@ function Footer() {
 
                             </a>
                         </li>
-                        <li className="list-inline-item">
+                        <li 
+                        onMouseEnter={() => props.setH(true)}
+                        onMouseLeave={() => props.setH(false)} 
+                        className="list-inline-item">
                             <a className="btn-floating btn-li mx-1" href="https://www.linkedin.com/company/studio-centauri/" target="_blank">
                                 <i className="fab fa-linkedin-in">
                                     <FontAwesomeIcon icon={faLinkedinIn} />
@@ -54,7 +66,10 @@ function Footer() {
 
                             </a>
                         </li>
-                        <li className="list-inline-item" style={{ transform: 'translateY(2px)' }}>
+                        <li 
+                        onMouseEnter={() => props.setH(true)}
+                        onMouseLeave={() => props.setH(false)} 
+                        className="list-inline-item" style={{ transform: 'translateY(2px)' }}>
                             <a className="btn-floating btn-discord mx-1" href="https://discord.gg/pThvGHs" target="_blank">
                                 <i className="fab fa-discord">
                                     <FontAwesomeIcon icon={faDiscord} />
@@ -62,7 +77,10 @@ function Footer() {
 
                             </a>
                         </li>
-                        <li className="list-inline-item" style={{ transform: 'translateY(2px)' }}>
+                        <li 
+                        onMouseEnter={() => props.setH(true)}
+                        onMouseLeave={() => props.setH(false)} 
+                        className="list-inline-item" style={{ transform: 'translateY(2px)' }}>
                             <a className="btn-floating btn-twitch mx-1" href="https://www.twitch.tv/studiocentauri" target="_blank">
                                 <i className="fab fa-twitch">
                                     <FontAwesomeIcon icon={faTwitch} />
@@ -76,7 +94,10 @@ function Footer() {
                 {/*  Footer Elements  */}
 
                 {/*  Copyright  */}
-                <div className="footer-copyright text-center py-3">
+                <div 
+                onMouseEnter={() => props.setH(true)}
+                onMouseLeave={() => props.setH(false)} 
+                className="footer-copyright text-center py-3">
                     © {currentYear} Game Development Club, IIT Kanpur
                     {/*  Theme derived from Airspace, by <a href="http://www.themefisher.com">Themefisher</a>.  */}
                 </div>
