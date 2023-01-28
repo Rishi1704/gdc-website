@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './Home.css';
+import './home.css';
 import Miscellaneous from './Miscellaneous';
 
 

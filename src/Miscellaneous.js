@@ -10,4 +10,4 @@ function Miscellaneous() {
     )
 }
 
-export default Miscellaneous
+export default Miscellaneous;
