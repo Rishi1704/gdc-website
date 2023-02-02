@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './home.css';
-import Miscellaneous from './Miscellaneous';
+// import Miscellaneous from './Miscellaneous';
 
 
 const images = [{ index: 1, src: 'https://images.unsplash.com/photo-1670662902769-da0cb1157fa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' },
@@ -37,19 +37,18 @@ const Home = (props) => {
         setPrevPercentage((ref.current.scrollLeft / (ref.current.scrollWidth - ref.current.clientWidth)) * -100);
     };
     const handleScroll = (e) => {
-        console.log(e);
         const perce = (ref.current.scrollLeft / (ref.current.scrollWidth - ref.current.clientWidth)) * -100
         setPercentage(perce);
     };
 
-    function horizontalScroll(event) {
-        event.preventDefault();
-        // const perce = (ref.current.scrollLeft / (ref.current.scrollWidth - ref.current.clientWidth)) * -100
-        // const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)))
-        event.scrollBy({
-            left: event.deltaY < 0 ? -30 : 30,
-        });
-    }
+    // function horizontalScroll(event) {
+    //     event.preventDefault();
+    //     // const perce = (ref.current.scrollLeft / (ref.current.scrollWidth - ref.current.clientWidth)) * -100
+    //     // const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)))
+    //     event.scrollLeft({
+    //         left: event.deltaY < 0 ? -30 : 30,
+    //     });
+    // }
 
     return (
         <div className='home-component' style={{ backgroundColor: 'black', color: 'white' }}>
@@ -62,29 +61,23 @@ const Home = (props) => {
                     onMouseLeave={() => props.setH(false)}>Club</h1>
             </div>
             <hr />
-            <h2 className='home-learn-heading'
+            <h2 
                 onMouseEnter={() => props.setH(true)}
                 onMouseLeave={() => props.setH(false)}>Learn</h2>
-            <div ref={ref} className='learn-body' onScroll={handleScroll} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onWheel={horizontalScroll}>
+            <div ref={ref} className='learn-body' onScroll={handleScroll} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} >
                 <div className='image-track'>
-
                     <div style={{ width: '50vw', marginRight: '-2vw' }}></div>
-
                     {images.map((image) => (
                         <img
                             onMouseEnter={() => props.setH(true)}
                             onMouseLeave={() => props.setH(false)}
                             key={image.index} unselectable='on' draggable='false' alt='' src={image.src} style={{ objectPosition: `${Math.min(Math.max((percentage) * (width - 100) / 100 + 50 + image.index * 22 + (image.index - 1) * 2, 0), 100)}% 50%` }} />
                     ))}
-
-
                     <div style={{ width: '50vw', marginLeft: '-2vw' }}></div>
-
                 </div>
             </div>
-
-            <Miscellaneous />
-        </div >
+            {/* <Miscellaneous /> */}
+        </div>
     )
 }
 

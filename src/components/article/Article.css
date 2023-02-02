@@ -1,13 +1,13 @@
-.body{
+.article{
     min-height: 100vh;
     background-color: black;
 }
-img{
+.article img{
     width: 100%;
     height: 46vh;
     opacity: 0.5;
 }
-h2{
+.article h2{
     position: absolute;
     top: 40%;
     width: 100%;
@@ -16,14 +16,14 @@ h2{
     font-weight: bold !important;
     text-align: center;
 }
-.heading{
+.article .heading{
     position: relative;
 }
-h3{
+.article h3{
     color: white;
     margin: 15px 30px !important;
 }
-p{
+.article p{
     color: #e0e0e0;
     margin:15px 30px;
     margin-bottom: 0 !important;

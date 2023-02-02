@@ -24,14 +24,10 @@ img {
     object-fit: cover;
 }
 
-.home-learn-heading {
-    display: flex;
-    justify-content: center;
-}
 
 
 
-@media (max-width:1000px) {
+/* @media (max-width:1000px) {
     img {
         height: 42vw;
         width: 32vw;
@@ -78,4 +74,4 @@ img {
         font-size: 2rem;
         margin-bottom: -10px;
     }
-}
+} */

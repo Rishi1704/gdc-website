@@ -4,7 +4,7 @@ import Navbar from '../navbar/Navbar';
 
 const Section = () => {
   return (
-    <div className='body'>
+    <div className='section'>
         <Navbar />
         <div className='heading'>
             <img src='https://media.geeksforgeeks.org/wp-content/uploads/20200422171614/CSharp-Tutorial.png' />
