@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './home.css';
+import './Home.css';
 // import Miscellaneous from './Miscellaneous';
 
 
@@ -41,14 +41,14 @@ const Home = (props) => {
         setPercentage(perce);
     };
 
-    // function horizontalScroll(event) {
-    //     event.preventDefault();
-    //     // const perce = (ref.current.scrollLeft / (ref.current.scrollWidth - ref.current.clientWidth)) * -100
-    //     // const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)))
-    //     event.scrollLeft({
-    //         left: event.deltaY < 0 ? -30 : 30,
-    //     });
-    // }
+    function horizontalScroll(event) {
+        event.preventDefault();
+        // const perce = (ref.current.scrollLeft / (ref.current.scrollWidth - ref.current.clientWidth)) * -100
+        // const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)))
+        event.scrollLeft({
+            left: event.deltaY < 0 ? -30 : 30,
+        });
+    }
 
     return (
         <div className='home-component' style={{ backgroundColor: 'black', color: 'white' }}>
@@ -64,7 +64,7 @@ const Home = (props) => {
             <h2 
                 onMouseEnter={() => props.setH(true)}
                 onMouseLeave={() => props.setH(false)}>Learn</h2>
-            <div ref={ref} className='learn-body' onScroll={handleScroll} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} >
+            <div ref={ref} className='learn-body' onScroll={handleScroll} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onWheel={horizontalScroll} >
                 <div className='image-track'>
                     <div style={{ width: '50vw', marginRight: '-2vw' }}></div>
                     {images.map((image) => (
