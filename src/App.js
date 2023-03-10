@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import Footer from './Footer';
-import Home from './Home';
+import Footer from './components/Footer/Footer';
+import Home from './components//Home/Home';
 import Section from './components/section/Section';
 import Article from './components/article/Article';
 import Cursor from './components/cursor';

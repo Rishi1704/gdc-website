@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import './Home.css';
-// import Miscellaneous from './Miscellaneous';
 
 
 const images = [{ index: 1, src: 'https://images.unsplash.com/photo-1670662902769-da0cb1157fa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' },
@@ -40,14 +39,18 @@ const Home = (props) => {
         const perce = (ref.current.scrollLeft / (ref.current.scrollWidth - ref.current.clientWidth)) * -100
         setPercentage(perce);
     };
-
+    
     function horizontalScroll(event) {
-        event.preventDefault();
+        if(event.deltaY!==0){
+            event.preventDefault();
+            const perce = (event.deltaY / (ref.current.scrollWidth - ref.current.clientWidth)) * -100
+            setPercentage(perce);
+        }
         // const perce = (ref.current.scrollLeft / (ref.current.scrollWidth - ref.current.clientWidth)) * -100
         // const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)))
-        event.scrollLeft({
-            left: event.deltaY < 0 ? -30 : 30,
-        });
+        // event.scrollLeft({
+        //     left: event.deltaY < 0 ? -30 : 30,
+        // });
     }
 
     return (
@@ -76,7 +79,6 @@ const Home = (props) => {
                     <div style={{ width: '50vw', marginLeft: '-2vw' }}></div>
                 </div>
             </div>
-            {/* <Miscellaneous /> */}
         </div>
     )
 }

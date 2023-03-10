@@ -1,8 +1,8 @@
 import React from 'react';
 import './Footer.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram, faFacebook, faLinkedinIn, faTwitch, faDiscord } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+// import { faInstagram, faFacebook, faLinkedinIn, faTwitch, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 const currentYear = new Date().getFullYear();
 
@@ -27,9 +27,9 @@ function Footer(props) {
                         onMouseLeave={() => props.setH(false)} 
                         className="list-inline-item">
                             <a className="btn-floating btn-email mx-1" href="mailto:gamedeviitk@gmail.com" target="_blank">
-                                <i className="fa fa-envelope">
+                                {/* <i className="fa fa-envelope">
                                     <FontAwesomeIcon icon={faEnvelope} />
-                                </i>
+                                </i> */}
 
                             </a>
                         </li>
@@ -38,9 +38,9 @@ function Footer(props) {
                         onMouseLeave={() => props.setH(false)} 
                         className="list-inline-item">
                             <a className="btn-floating btn-fb mx-1" href="https://www.facebook.com/gamedev.iitk" target="_blank">
-                                <i className="fab fa-facebook">
+                                {/* <i className="fab fa-facebook">
                                     <FontAwesomeIcon icon={faFacebook} />
-                                </i>
+                                </i> */}
 
                             </a>
                         </li>
@@ -49,9 +49,9 @@ function Footer(props) {
                         onMouseLeave={() => props.setH(false)} 
                         className="list-inline-item">
                             <a className="btn-floating btn-ins mx-1" href="https://www.instagram.com/gamedev_iitk/" target="_blank">
-                                <i className="fab fa-instagram">
+                                {/* <i className="fab fa-instagram">
                                     <FontAwesomeIcon icon={faInstagram} />
-                                </i>
+                                </i> */}
 
                             </a>
                         </li>
@@ -60,9 +60,9 @@ function Footer(props) {
                         onMouseLeave={() => props.setH(false)} 
                         className="list-inline-item">
                             <a className="btn-floating btn-li mx-1" href="https://www.linkedin.com/company/studio-centauri/" target="_blank">
-                                <i className="fab fa-linkedin-in">
+                                {/* <i className="fab fa-linkedin-in">
                                     <FontAwesomeIcon icon={faLinkedinIn} />
-                                </i>
+                                </i> */}
 
                             </a>
                         </li>
@@ -71,9 +71,9 @@ function Footer(props) {
                         onMouseLeave={() => props.setH(false)} 
                         className="list-inline-item" style={{ transform: 'translateY(2px)' }}>
                             <a className="btn-floating btn-discord mx-1" href="https://discord.gg/pThvGHs" target="_blank">
-                                <i className="fab fa-discord">
+                                {/* <i className="fab fa-discord">
                                     <FontAwesomeIcon icon={faDiscord} />
-                                </i>
+                                </i> */}
 
                             </a>
                         </li>
@@ -82,9 +82,9 @@ function Footer(props) {
                         onMouseLeave={() => props.setH(false)} 
                         className="list-inline-item" style={{ transform: 'translateY(2px)' }}>
                             <a className="btn-floating btn-twitch mx-1" href="https://www.twitch.tv/studiocentauri" target="_blank">
-                                <i className="fab fa-twitch">
+                                {/* <i className="fab fa-twitch">
                                     <FontAwesomeIcon icon={faTwitch} />
-                                </i>
+                                </i> */}
                             </a>
                         </li>
                     </ul>
